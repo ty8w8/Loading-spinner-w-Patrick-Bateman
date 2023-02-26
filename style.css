@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/loading/background-img/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.spinner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.spinner-sector{
+    border-radius: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 15px solid transparent;
+    mix-blend-mode: overlay;
+}
+
+.spinner-sector-oneColor {
+    animation: rotate 3.1s ease-out infinite;
+    border-top: 15px solid #E8FFE8;
+}
+.spinner-sector-twoColor {
+    animation: rotate 3.2s ease-in infinite;
+    border-top: 15px solid #A6FFF2;
+}
+.spinner-sector-ThreeColor {
+    animation: rotate 3.5s ease-out infinite;
+    border-top: 15px solid #74F9FF;
+}
+.spinner-sector-FourColor {
+    animation: rotate 3.7s ease-in infinite;
+    border-top: 15px solid #74F9FF;
+}
+
+@keyframes rotate{
+    from{transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+.spinner-text{
+    font-family: "Tilt Neon";
+    font-size: 3em;
+    animation: loading 3.5s ease-in-out infinite;
+    
+}
+@keyframes loading {
+    0%, 100%{
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 0.25;
+    }
+}
